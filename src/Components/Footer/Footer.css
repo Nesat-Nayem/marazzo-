@@ -1,0 +1,20 @@
+.icons{
+
+}
+.icons i{
+    font-size: 20px;
+    background-color: brown;
+    padding: 20px 20px;
+    margin-right: 10px;
+    color: white;
+}
+
+.f-image{
+    padding-right: 15px;
+    display: flex;
+    justify-content: right;
+}
+.bgset{
+    background-color: #2E353B;
+    padding: 30px 0;
+}
