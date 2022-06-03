@@ -8,6 +8,7 @@
     justify-content: end;
     margin-right: 50px;
     padding: 10px 0;
+    margin-bottom: 0;
    
 }
 .list-item li{
@@ -16,6 +17,39 @@
     font-size: 20px;
     color: white;
 }
-.item{
-    
+.witerow{
+    margin: 0 0;
+}
+.form-control{
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 10px 0;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+.form-control::placeholder{
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+    padding-left: 10px;
+}
+.form-control-underlined{
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-radius:0;
+    padding-left: 0;
+}
+.search-form{
+    width: 50%;
+}
+.input-group{
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+.quantity{
+    background-color: orange;
+    margin: 10px -20px;
+    border-radius: 50%;
+    padding: 2px;
 }
