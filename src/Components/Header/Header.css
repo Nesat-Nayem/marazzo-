@@ -1,0 +1,21 @@
+
+.short-nav{
+    background-color: #157ED2;
+}
+.list-item{
+    list-style: none;
+    display: flex ;
+    justify-content: end;
+    margin-right: 50px;
+    padding: 10px 0;
+   
+}
+.list-item li{
+    list-style: none;
+    margin-right: 15px;
+    font-size: 20px;
+    color: white;
+}
+.item{
+    
+}
