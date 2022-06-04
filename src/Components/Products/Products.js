@@ -10,7 +10,7 @@ const Products = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://secret-ridge-52193.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => dispatch(setProducts(data)));
   }, []);
@@ -30,18 +30,15 @@ const Products = () => {
 
   // end of the code
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://secret-ridge-52193.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
   return (
     <div className="container">
-        <Filter></Filter>
+      <Filter></Filter>
       <div className="row">
-       
-       
-
         <div className="col-md-12">
           <div>
             <div className="container mx-auto d-flex justify-content-between my-5 align-items-center">

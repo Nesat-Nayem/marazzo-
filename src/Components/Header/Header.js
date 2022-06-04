@@ -7,6 +7,7 @@ import Cart from "../Cart/Cart";
 import "./Header.css";
 const Header = () => {
   const products = useSelector((state) => state.products);
+  const totalPrice = useSelector((state) => state.products.totalPrice);
   const navigate = useNavigate();
 
   const { allProducts, wishList } = products;
@@ -48,10 +49,7 @@ const Header = () => {
       </div>
       <div>
         <hr className="witerow" />
-        <Navbar
-          style={{ backgroundColor: "#157ED2",  }}
-          expand="lg"
-        >
+        <Navbar style={{ backgroundColor: "#157ED2" }} expand="lg">
           <Container>
             <Navbar.Brand href="/">
               <img src="https://i.postimg.cc/x1b06w39/logo.png" alt="logo" />
@@ -79,35 +77,41 @@ const Header = () => {
               </Form>
 
               <Nav.Item>
-                <a href="#" style={{textDecoration:'none'}} onClick={toggleDrawer('right', true)}>
+                <a
+                  href="#"
+                  style={{ textDecoration: "none" }}
+                  onClick={toggleDrawer("right", true)}
+                >
                   <div className="d-flex">
-                    <div className="mt-2">
+                    <div className="mt-2 position-relative">
                       <img
-                        className="position-relative"
+                        className=""
                         src="https://i.postimg.cc/65pVzMdQ/shopingcart.png"
                       />
-                      <span className="position-absolute quantity translate-middle ">
+                      <span
+                        style={{ margin: "10px -20px" }}
+                        className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger "
+                      >
                         {cart.length}
                         <span className="visually-hidden">Card</span>
                       </span>
-
                     </div>
                     <div className="ms-3">
                       <h5 style={{ color: "rgba(255,255,255,0.8)" }}>
                         Shoping Cart
                       </h5>
-                      <h3 style={{ color: "white" }}>$500</h3>
+                      <h3 style={{ color: "white" }}>${totalPrice}</h3>
                     </div>
                   </div>
                 </a>
                 <Drawer
-                        anchor={"right"}
-                        open={state["right"]}
-                        sx={{ width: "300px" }}
-                        onClose={toggleDrawer("right", false)}
-                      >
-                        <Cart />
-                      </Drawer>
+                  anchor={"right"}
+                  open={state["right"]}
+                  sx={{ width: "300px" }}
+                  onClose={toggleDrawer("right", false)}
+                >
+                  <Cart />
+                </Drawer>
               </Nav.Item>
             </Navbar.Collapse>
           </Container>

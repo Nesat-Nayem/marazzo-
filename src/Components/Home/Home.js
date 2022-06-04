@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://secret-ridge-52193.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => dispatch(setProducts(data)));
   }, []);
@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-        <Filter></Filter>
+      <Filter></Filter>
       <div className="row row-cols-1 row-cols-md-3 g-4 container mx-auto my-5">
         {products.slice(0, 8).map((pro) => {
           return (
